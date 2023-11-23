@@ -15,6 +15,13 @@ for (let i = 0; i > 5; i++) {
     console.log(i);
 }
 
+// 1) il codice inizializza un ciclo for dove viene dichiarata una variabile "i" (l'indice) a 0, ciclo quando il mio indice "i" è maggiore a 5 (la mia condizione), con un avanzamento di 1 sull'indice (incremento). Ad ogni ciclo stampo in console il valore di "i". 
+// 2) la sintassi è corretta.
+// 3) c'è un errore logico nella condizione del ciclo in quanto inizializziamo la variabile i a 0, poniamo la condizione che i > 5 che non è vera quindi non entrerà mai nel ciclo.
+// la soluzione corretta è la seguente:
+// for (let i = 0; i < 5; i++) {
+//     console.log(i);
+// }
 
 // ESERCIZIO 2
 function addIfEven(num) {
