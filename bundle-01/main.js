@@ -46,6 +46,10 @@ function loopToFive() {
         console.log(i);
     }
 }
+// 1) il codice dovrebbe inizializzare una funzione loopToFive all'interno della quale c'è un ciclo for che per ogni elemento "i" (con "i" che comincia da 0, fino a quando "i" < 5, con un incremento di "i" di 1) stampa in console il suo valore.
+// 2) c'è un errore di sintassi in quanto le condizioni all'interno del ciclo for dovrebbero essere separate da punto e virgola
+// e non dalle sole virgole.
+// 3) la logica è corretta salvo l'errore di sintassi.
 
 
 // ESERCIZIO 4 (suggerimento: ci sono 7 errori)
