@@ -30,6 +30,14 @@ function addIfEven(num) {
     }
     return num;
 }
+// il codice inizializza una funzione addIfEven con un argomento (num) dove nel caso in cui num è divisibile per 2 senza lasciare resto mi restituisce num + 5, altrimenti mi restituisce solo num.
+// 2) e 3) il codice così scritto nella condizione if utilizza un solo simbolo d'uguaglianza che equivale ad assegnare un valore, invece noi vogliamo fare un confronto e dobbiamo utilizzare "===". la funzione dovrebbe essere cosi scritta:
+// function addIfEven(num) {
+//     if (num % 2 === 0) {
+//         return num + 5;
+//     }
+//     return num;
+// }
 
 
 // ESERCIZIO 3
