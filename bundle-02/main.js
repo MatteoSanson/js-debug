@@ -51,12 +51,13 @@
 
 // 1) abbiamo una funzione printColorsNumber, al suo interno stabiliamo una variabile con un array di stringhe. facciamo un console.log con un messaggio tra backtick per mostrare anche il valore della proprietà della variabile interessata.
 // 2) c'è un errore di sintassi perchè bisogna scrivere .length e non .lenght 
+// 3) non ci sono errori logici
 // codice corretto
-function printColorsNumber() {
-    const colors = ['blue', 'red', 'yellow', 'green', 'black'];
-    console.log(`Nella mia palette ci sono ${colors.length} colori!`);
-}
-printColorsNumber();
+// function printColorsNumber() {
+//     const colors = ['blue', 'red', 'yellow', 'green', 'black'];
+//     console.log(`Nella mia palette ci sono ${colors.length} colori!`);
+// }
+// printColorsNumber();
 
 
 // ESERCIZIO 3
@@ -67,6 +68,17 @@ printColorsNumber();
 //     console.log(`Il risultato finale è ${total}`);
 // }
 // addNumbers();
+// 1) abbiamo una funzione addNumbers, al suo interno abbiamo due variabili, stampa in console un risultato e infine viene richiamata la funzione.
+// 2)non ci sono errori di sintassi
+// 3) c'è un errore logico perchè il prompt dove richiedo un numero per come è scritto mi restituirà sempre una stringa, quindi in total farò una concatenazione di stringa e numero. come soluzione posso convernire il "numero stringa" del prompt in numero cosi bella variabile total verrà sommato a 12.
+// codice corretto
+function addNumbers() {
+    const userNumber = parseInt(prompt('Inserisci un numero'));
+    const total = userNumber + 12;
+
+    console.log(`Il risultato finale è ${total}`);
+}
+addNumbers();
 
 
 // ESERCIZIO 4
