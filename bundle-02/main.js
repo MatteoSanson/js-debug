@@ -72,13 +72,13 @@
 // 2)non ci sono errori di sintassi
 // 3) c'è un errore logico perchè il prompt dove richiedo un numero per come è scritto mi restituirà sempre una stringa, quindi in total farò una concatenazione di stringa e numero. come soluzione posso convernire il "numero stringa" del prompt in numero cosi bella variabile total verrà sommato a 12.
 // codice corretto
-function addNumbers() {
-    const userNumber = parseInt(prompt('Inserisci un numero'));
-    const total = userNumber + 12;
+// function addNumbers() {
+//     const userNumber = parseInt(prompt('Inserisci un numero'));
+//     const total = userNumber + 12;
 
-    console.log(`Il risultato finale è ${total}`);
-}
-addNumbers();
+//     console.log(`Il risultato finale è ${total}`);
+// }
+// addNumbers();
 
 
 // ESERCIZIO 4
@@ -99,6 +99,28 @@ addNumbers();
 //     }
 // }
 // checkAccess();
+
+// 1) abbiamo una funzione checkAccess, al suo interno abbiamo una variabile di array con una lista di indirizzi email stringa, una variabile prompt che salva il dato richiesto all'utente, una variabile grantAccess con un valore stringa. a seguito una condizione, se l'array di indirizzi include l'indirizzo inserito dall'utente riassegnamo la variabile grantAcces in true, a seguito un'altra condizione che se grantAccess è true l'accesso è consentito altrimenti negato
+// 2) non ci sono errori di sintassi.
+// 3) ci sono errori di logica, i valori false e true sono rappresentati come stringa quanto dovrebbero essere valori booleani, quindi scritti senza virgolette
+// codice corretto
+function checkAccess() {
+    const addresses = ['mymail@mail.com', 'yourmail@mail.com', 'hermail@mail.com', 'hismail@mail.com'];
+    const userEmail = prompt('Inserisci il tuo indirizzo email');
+
+    let grantAccess = false;
+
+    if (addresses.includes(userEmail)) {
+        grantAccess = true;
+    }
+
+    if (grantAccess === true) {
+        console.log('Accesso consentito!');
+    } else {
+        console.log('Accesso negato!');
+    }
+}
+checkAccess();
 
 
 // ESERCIZIO 5 (suggerimento: c'è un solo errore)
