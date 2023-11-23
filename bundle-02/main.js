@@ -102,7 +102,8 @@
 
 // 1) abbiamo una funzione checkAccess, al suo interno abbiamo una variabile di array con una lista di indirizzi email stringa, una variabile prompt che salva il dato richiesto all'utente, una variabile grantAccess con un valore stringa. a seguito una condizione, se l'array di indirizzi include l'indirizzo inserito dall'utente riassegnamo la variabile grantAcces in true, a seguito un'altra condizione che se grantAccess è true l'accesso è consentito altrimenti negato
 // 2) non ci sono errori di sintassi.
-// 3) ci sono errori di logica, i valori false e true sono rappresentati come stringa quanto dovrebbero essere valori booleani, quindi scritti senza virgolette
+// 3) ci sono errori di logica, i valori false e true sono rappresentati come stringa quanto dovrebbero essere valori booleani, quindi scritti senza virgolette.
+// possiamo anche raggruppare i primi due if in uno solo 
 // codice corretto
 function checkAccess() {
     const addresses = ['mymail@mail.com', 'yourmail@mail.com', 'hermail@mail.com', 'hismail@mail.com'];
@@ -112,9 +113,6 @@ function checkAccess() {
 
     if (addresses.includes(userEmail)) {
         grantAccess = true;
-    }
-
-    if (grantAccess === true) {
         console.log('Accesso consentito!');
     } else {
         console.log('Accesso negato!');
