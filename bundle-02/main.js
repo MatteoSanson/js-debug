@@ -28,20 +28,18 @@
 // 3) la variabile message viene inizializzata come const ma poi viene riassegnata il che è un errore, bisgona inizializzarla come let.
 // al termine delle condizioni ho fatto un console.log di message in modo da poter visualizzare in console al richiamo della funzione.
 
-function checkAge() {
-    const myAge = 32;
-    let message = '';
+// function checkAge() {
+//     const myAge = 32;
+//     let message = '';
 
-    if (myAge < 18) {
-        message = `Sei troppo giovane! Hai ${myAge} anni!`;
-    } else {
-        message = 'Hai più di 18 anni!';
-    }
-    console.log(message);
-}
-checkAge();
-
-
+//     if (myAge < 18) {
+//         message = `Sei troppo giovane! Hai ${myAge} anni!`;
+//     } else {
+//         message = 'Hai più di 18 anni!';
+//     }
+//     console.log(message);
+// }
+// checkAge();
 
 
 // ESERCIZIO 2
@@ -50,6 +48,15 @@ checkAge();
 //     console.log(`Nella mia palette ci sono ${colors.lenght} colori!`);
 // }
 // printColorsNumber();
+
+// 1) abbiamo una funzione printColorsNumber, al suo interno stabiliamo una variabile con un array di stringhe. facciamo un console.log con un messaggio tra backtick per mostrare anche il valore della proprietà della variabile interessata.
+// 2) c'è un errore di sintassi perchè bisogna scrivere .length e non .lenght 
+// codice corretto
+function printColorsNumber() {
+    const colors = ['blue', 'red', 'yellow', 'green', 'black'];
+    console.log(`Nella mia palette ci sono ${colors.length} colori!`);
+}
+printColorsNumber();
 
 
 // ESERCIZIO 3
