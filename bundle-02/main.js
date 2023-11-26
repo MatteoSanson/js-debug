@@ -105,20 +105,20 @@
 // 3) ci sono errori di logica, i valori false e true sono rappresentati come stringa quanto dovrebbero essere valori booleani, quindi scritti senza virgolette.
 // possiamo anche raggruppare i primi due if in uno solo 
 // codice corretto
-function checkAccess() {
-    const addresses = ['mymail@mail.com', 'yourmail@mail.com', 'hermail@mail.com', 'hismail@mail.com'];
-    const userEmail = prompt('Inserisci il tuo indirizzo email');
+// function checkAccess() {
+//     const addresses = ['mymail@mail.com', 'yourmail@mail.com', 'hermail@mail.com', 'hismail@mail.com'];
+//     const userEmail = prompt('Inserisci il tuo indirizzo email');
 
-    let grantAccess = false;
+//     let grantAccess = false;
 
-    if (addresses.includes(userEmail)) {
-        grantAccess = true;
-        console.log('Accesso consentito!');
-    } else {
-        console.log('Accesso negato!');
-    }
-}
-checkAccess();
+//     if (addresses.includes(userEmail)) {
+//         grantAccess = true;
+//         console.log('Accesso consentito!');
+//     } else {
+//         console.log('Accesso negato!');
+//     }
+// }
+// checkAccess();
 
 
 // ESERCIZIO 5 (suggerimento: c'è un solo errore)
@@ -148,6 +148,33 @@ checkAccess();
 //         }
 //     }
 //     checkAccessImproved();
+
+// 1) abbiamo una funzione checkAccessImproved(), al suo interno abbiamo una variabile addresses che è un array di indirizzi email e una variabile userEmail che tramite prompt salva l'indirizzo email dell'utente. Viene impostata una varibiale grantAccess in false. Si inizia un ciclo per la lunghezza dell'array, ad ogni indice salviamo il dato nella variabile email e se la lunghezza della email inserita dall'utente > 5 iniziamo una nuova condizione dove se il dato presente in email è uguale alla mail inserita dall'utente allora la variabile grantAccess la riassegnamo a true, altrimenti la mail non è valida. Quindi, una nuova condizione, se grantAccess è true allora stampiamo in console accesso consentito, altrimenti accesso negato. Viene richiamata la funzione 
+// 2) e 3) la parentesi grafa della funzione viene aperta ma non chiusa, i valori true e false sono tra apici, quindi stringhe, dovrebbero invece essere valori booleani vero falso. la stampa in console dei messaggi di accesso o meno dovrebbe essere stampata fuori dal ciclo senno avremmo più messaggi del dovuto. Ecco una risoluzione del codice.
+function checkAccessImproved() {
+    const addresses = ['mymail@mail.com', 'yourmail@mail.com', 'hermail@mail.com', 'hismail@mail.com'];
+
+    const userEmail = prompt('Inserisci il tuo indirizzo email');
+
+    let grantAccess = false;
+
+    for (let i = 0; i < addresses.length; i++) {
+        const email = addresses[i];
+
+        if (userEmail.length > 5) {
+
+            if (email === userEmail) {
+            grantAccess = true;
+            }
+        }   
+    }
+    if (grantAccess) {
+        console.log('Accesso consentito!');
+    } else {
+        console.log('Accesso negato!');
+    }
+}
+checkAccessImproved();
 
 
 
